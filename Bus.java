@@ -4,6 +4,7 @@ private String depart;
 private String terminal;
 private int weight;
 private double height;
+private Passenger[] capacity;
 
 public Bus(String name, String depart, String terminal, int weight, double height){
 this.name = name;
@@ -11,6 +12,7 @@ this.depart = depart;
 this.terminal = terminal;
 this.weight = weight;
 this.height = height;
+this.capacity = new Passenger[12];
 }
 
 public String getName(){
@@ -31,6 +33,16 @@ public int getWeight(){
 
 public double getHeight(){
   return this.height;
+}
+
+public int emptyBus(){
+  int count = 0;
+  for (Passenger passenger : this.capacity) {
+    if (passenger != null) {
+      count++;
+    }
+  }
+  return count;
 }
 
 
