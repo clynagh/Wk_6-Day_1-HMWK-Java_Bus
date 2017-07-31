@@ -42,5 +42,11 @@ public void busStartsEmpty(){
   assertEquals(0, bus.emptyBus());
 }
 
+@Test
+public void addPassengersToTheBus(){
+  bus.addPassenger(passenger);
+  assertEquals(1, bus.emptyBus());
+}
+
 
 }

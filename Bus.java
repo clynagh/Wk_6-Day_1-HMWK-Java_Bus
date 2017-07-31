@@ -45,5 +45,16 @@ public int emptyBus(){
   return count;
 }
 
+public void addPassenger(Passenger passenger){
+  if (busIsFull()) {
+    return;
+  }
+  int emptyBus = emptyBus();
+  capacity[emptyBus] = passenger;
+}
+public boolean busIsFull(){
+  return emptyBus() == capacity.length;
+}
 
 }
+
