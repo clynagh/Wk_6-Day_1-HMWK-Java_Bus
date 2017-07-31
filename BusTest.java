@@ -7,7 +7,7 @@ public class BusTest {
 
   @Before
   public void before(){
-    bus = new Bus("Henry", "Edinburgh");
+    bus = new Bus("Henry", "Edinburgh", "Portobello");
 }
 
 @Test
@@ -18,6 +18,11 @@ public void hasName(){
 @Test
 public void hasDeparture(){
   assertEquals("Edinburgh", bus.getDeparture() );
+}
+
+@Test
+public void hasTerminal(){
+  assertEquals("Portobello", bus.getTerminal());
 }
 
 
